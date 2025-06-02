@@ -1,137 +1,132 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor principal */
 .main-post-container {
   display: flex;
-  flex-direction: row;
-  align-items:center;
   justify-content: center;
+  align-items: center;
   padding: 40px;
-  height: 94vh;
+  min-height: 94vh;
+  box-sizing: border-box;
 }
 
+/* Contenedor de todos los posts */
 .all-posts {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 30px;
   width: 100%;
-  height: 600px;
-  gap: 50px;
+  height: 400px; 
 }
 
+/* Estilo de cada post */
 .post-box {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
   width: 400px;
-  height: 400px;
-  padding: 5px;
+  height: 550px;
   border-radius: 10px;
-  box-shadow: gray 0px 0px 2px;  
-  gap: 30px;
+  overflow: hidden;
 }
 
-/*Información del usuario y también información del post */
-
+/* Información del usuario */
 .user-info {
   display: flex;
-  flex-direction: row;  
-  align-items: flex-start;  
-  gap: 20px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-.user-photo img{
-  width: 50px;
-  height: 50px;
+.user-photo img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-photo .profile-daniel{
+  border: black 1px solid;
 }
 
 .user-details {
-  display: flex;
-  flex-direction: column; 
-  gap: 4px; 
-}
-
-
-.post-time {
-  margin-left: 0;  
-  font-size: 14px;
-  color: #A0AEC0;
+  flex: 1;
 }
 
 .user-name {
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: black;
-  font-size: 17px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
 }
 
-span {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 17px;
-  line-height: 1.5;
+.user-name span {
   font-weight: normal;
+  color: #666;
+}
+
+.post-time {
+  font-size: 13px;
+  color: #999;
 }
 
 .more {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 20px;
+  margin-left: auto;
+  font-size: 25px;
+  color: #333;
   cursor: pointer;
   font-weight: bold;
-  margin-left: 105px;
+  line-height: 1;
 }
 
-
-/* Foto del post */ 
+/* Contenido del post */
+.post-content {
+  padding: 0 16px;
+}
 
 .photo-post {
   width: 100%;
-  height: 250px;
-  border-radius: 50%;
-}
-
-
-/* Footer del post */
-
-
-.post-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  height: 350px;
+  background-color: #eee;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .post-text {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
+  margin-bottom: 16px;
 }
 
-.like-icon {
-  width: 20px;
-  height: 20px;
+/* Footer del post */
+.post-footer {
+  padding: 12px 16px;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
 }
 
-.number-likes {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.comment-icon {
+.action-icon {
   width: 20px;
   height: 20px;
-  cursor: pointer;
 }
 
-.number-comments {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
+.action-text {
   font-size: 14px;
+  color: #333;
   font-weight: bold;
 }
